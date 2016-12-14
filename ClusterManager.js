@@ -183,7 +183,7 @@ module.exports = function ClusterManager(options) {
       }
       return;
     }
-    origFork.bind(this)();
+    origFork.bind(this)(config.env);
   };
 
   log('Master process PID is ' + process.pid);
